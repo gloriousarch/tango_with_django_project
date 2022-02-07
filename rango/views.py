@@ -3,4 +3,8 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse('Rango says hey there partner!')
+    return HttpResponse('<a href="/rango/about">Rango says hey there partner!</a>')
+
+
+def about(request):
+    return HttpResponse('<a href="/rango">Rango says here is the about page.</a>')
