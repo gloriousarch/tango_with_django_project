@@ -1,3 +1,4 @@
+from random import randint
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tango_with_django_project.settings')
 
@@ -42,7 +43,7 @@ def populate():
         c_likes = cat_data.get('likes', 0)
         c = add_cat(cat, c_views, c_likes)
         for p in cat_data['pages']:
-            add_page(c, p['title'], p['url'])
+            add_page(c, p['title'], p['url'], randint(1, 250))
 
     for c in Category.objects.all():
         for p in Page.objects.filter(category=c):
