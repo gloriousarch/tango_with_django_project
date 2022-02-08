@@ -112,8 +112,8 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Append Slash
-APPEND_SLASH = True
+# Login route
+LOGIN_URL = 'rango:login'
 
 # Media files
 MEDIA_ROOT = MEDIA_DIR
